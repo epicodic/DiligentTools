@@ -525,7 +525,7 @@ void Model::LoadTextures(IRenderDevice*         pDevice,
 
             if (pTextureCache != nullptr)
             {
-                pTextureCache->emplace(BaseDir + gltf_image.uri, pTexture);
+                pTextureCache->emplace(BaseDir + gltf_image.uri, Diligent::RefCntWeakPtr<Diligent::ITexture>(pTexture));
             }
         }
 
